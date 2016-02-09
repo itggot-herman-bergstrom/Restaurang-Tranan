@@ -1,27 +1,10 @@
+$("#slideshow > div:gt(0)").hide();
 
-$(window).load(function(){
-    var pages = $('#container li'), current=0;
-    var currentPage,nextPage;
-
-    $('#container .button').click(function(){
-        currentPage= pages.eq(current);
-        if($(this).hasClass('prevButton'))
-        {
-
-            if (current <= 0)
-                current=pages.length-1;
-            else
-                current=current-1;
-        }
-        else
-        {
-            if (current >= pages.length-1)
-                current=0;
-            else
-                current=current+1;
-        }
-        nextPage = pages.eq(current);
-        currentPage.hide();
-        nextPage.show();
-    });
-});
+setInterval(function() {
+    $('#slideshow > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow');
+},  4000);
