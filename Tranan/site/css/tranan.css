@@ -59,7 +59,7 @@ header nav ul li a {
     position: absolute;
 }
 
-#zeppelinare {
+.slideshowbild {
     width: 1005px;
     height: 600px;
 
@@ -143,4 +143,68 @@ header nav ul li a {
     color: rgba(255,255,255,0.9);
     font-family: 'Cinzel', serif;
     -webkit-text-stroke: 0.5px black;
+}
+
+article p {
+    columns: 3;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    line-height: 100%;
+}
+
+#mobillogga {
+    margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+    #mobillogga {
+        visibility: hidden;
+        height: 0;
+    }
+}
+@media (max-width: 600px) {
+
+    #ram {
+        width: 450px;
+        margin-top: 20px;
+        height: 1765px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header{
+        visibility: hidden;
+        height: 0;
+        width: 0;
+    }
+
+    #slideshow {
+        width: 448px;
+        height: 267px;
+    }
+
+    .slideshowbild {
+        width: 448px;
+        height: auto;
+    }
+
+    .ruta {
+        float: left;
+        width: 448px;
+        height: 370px;
+        border: solid black 2.5px;
+    }
+
+    #menyram {
+        width: 450px;
+        height: 1600px;
+    }
+
+    article p {
+        columns: 1;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        line-height: 100%;
+    }
+
 }
