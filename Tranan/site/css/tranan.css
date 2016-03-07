@@ -273,4 +273,12 @@ article p {
         line-height: 100%;
     }
 
+    #kontaktram {
+        width: 320px;
+        height: 3300px;
+    }
+
+    #osynlig {
+        height: 50px;
+    }
 }
